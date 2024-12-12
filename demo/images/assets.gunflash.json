@@ -1,0 +1,111 @@
+{
+  "frames": {
+    "000": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 51,
+        "h": 29.200000000000003
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 51,
+        "h": 29.200000000000003
+      },
+      "sourceSize": {
+        "w": 51.2,
+        "h": 29.200000000000003
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "002": {
+      "frame": {
+        "x": 0,
+        "y": 29.200000000000003,
+        "w": 48.6,
+        "h": 21.8
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2.6,
+        "y": 3.2,
+        "w": 48.6,
+        "h": 21.8
+      },
+      "sourceSize": {
+        "w": 51.2,
+        "h": 29.200000000000003
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "001": {
+      "frame": {
+        "x": 0,
+        "y": 51,
+        "w": 48.400000000000006,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2.6,
+        "y": 3,
+        "w": 48.400000000000006,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 51.2,
+        "h": 29.200000000000003
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "003": {
+      "frame": {
+        "x": 0,
+        "y": 73,
+        "w": 42.2,
+        "h": 23
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 2.6,
+        "w": 42.2,
+        "h": 23
+      },
+      "sourceSize": {
+        "w": 51.2,
+        "h": 29.200000000000003
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "gunflash.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 51,
+      "h": 96
+    },
+    "scale": 0.2
+  }
+}

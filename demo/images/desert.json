@@ -1,0 +1,231 @@
+{
+  "frames": {
+    "desert.001": {
+      "frame": {
+        "x": 1,
+        "y": 1,
+        "w": 248.5,
+        "h": 248.5
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3.5,
+        "y": 3.5,
+        "w": 248.5,
+        "h": 248.5
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "desert.002": {
+      "frame": {
+        "x": 251.5,
+        "y": 1,
+        "w": 248.5,
+        "h": 248.5
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3.5,
+        "y": 3.5,
+        "w": 248.5,
+        "h": 248.5
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "desert.003": {
+      "frame": {
+        "x": 1,
+        "y": 251.5,
+        "w": 248.5,
+        "h": 248.5
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 4,
+        "w": 248.5,
+        "h": 248.5
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "desert.004": {
+      "frame": {
+        "x": 251.5,
+        "y": 251.5,
+        "w": 248.5,
+        "h": 248.5
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 4,
+        "w": 248.5,
+        "h": 248.5
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "desert.005": {
+      "frame": {
+        "x": 502,
+        "y": 1,
+        "w": 248.5,
+        "h": 248.5
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 4,
+        "w": 248.5,
+        "h": 248.5
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "desert.006": {
+      "frame": {
+        "x": 502,
+        "y": 251.5,
+        "w": 248.5,
+        "h": 248.5
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 4,
+        "w": 248.5,
+        "h": 248.5
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "desert.007": {
+      "frame": {
+        "x": 1,
+        "y": 502,
+        "w": 248.5,
+        "h": 248.5
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 4,
+        "w": 248.5,
+        "h": 248.5
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "desert.008": {
+      "frame": {
+        "x": 251.5,
+        "y": 502,
+        "w": 248.5,
+        "h": 248.5
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 4,
+        "w": 248.5,
+        "h": 248.5
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "desert.009": {
+      "frame": {
+        "x": 502,
+        "y": 502,
+        "w": 248.5,
+        "h": 248.5
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 4,
+        "w": 248.5,
+        "h": 248.5
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "desert.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 752,
+      "h": 752
+    },
+    "scale": 0.5
+  }
+}

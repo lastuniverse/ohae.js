@@ -1,0 +1,63 @@
+{
+  "frames": {
+    "tower": {
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 60,
+        "h": 122
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 60,
+        "h": 122
+      },
+      "sourceSize": {
+        "w": 60,
+        "h": 122
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "body": {
+      "frame": {
+        "x": 2,
+        "y": 128,
+        "w": 62,
+        "h": 92
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 62,
+        "h": 92
+      },
+      "sourceSize": {
+        "w": 62,
+        "h": 92
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "tank_01.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 66,
+      "h": 222
+    },
+    "scale": 1
+  }
+}
