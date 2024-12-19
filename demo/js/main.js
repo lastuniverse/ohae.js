@@ -1,8 +1,8 @@
-import { Game, Keyboard } from './src/engine/index.mjs'
-import { World } from './game/class.world.mjs'
-import { Tank } from './game/class.tank.mjs'
+import { GameCore, Keyboard } from './src/engine/index.js'
+import { World } from './game/World.js'
+import { Tank } from './game/Tank.js'
 
-const game = new Game();
+const game = new GameCore();
 game.pause = false;
 
 // инициализация

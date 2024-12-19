@@ -1,4 +1,4 @@
-import { Point } from './class.point.mjs'
+import { Point } from './Point.js'
 const toRadMultiplier = Math.PI / 180;
 const toGradMultiplier = 180 / Math.PI;
 

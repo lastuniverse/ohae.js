@@ -1,6 +1,6 @@
 const coloredFrames = {};
 
-export class Frames {
+export class SpriteFrames {
     #frame;
     #frameName = 'default';
     _tint;

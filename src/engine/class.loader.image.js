@@ -1,7 +1,7 @@
-import { tint } from '../../tools/image.tint.mjs'
-import { Loader} from './class.loader.mjs'
-import { Frames } from './class.frames.mjs'
-import { urlCache } from './single.url.cache.mjs'
+import { tint } from '../../tools/ImageTint.js'
+import { Loader} from './class.loader.js'
+import { SpriteFrames } from './SpriteFrames.js'
+import { urlCache } from './urlCache.js'
 
 export class ImageLoader extends Loader {
     cacheName = "images";
@@ -33,7 +33,7 @@ export class ImageLoader extends Loader {
                 })
                 .then((data) => {
                     img.addEventListener('load', () => {
-                        const frames = new Frames(img);
+                        const frames = new SpriteFrames(img);
                         frames.setAtlasData(data);
                         urlCache.set(ImageLoader.cacheName, name, frames);
                         this.count++;
@@ -44,7 +44,7 @@ export class ImageLoader extends Loader {
         } else {
             const img = new Image();
             img.addEventListener('load', () => {
-                const frames = new Frames(img);
+                const frames = new SpriteFrames(img);
                 urlCache.set(ImageLoader.cacheName, name, frames)
                 this.count++;
             }, false);
@@ -65,7 +65,7 @@ export class ImageLoader extends Loader {
         if (!sourceFrames) throw `Image with sourceName '${sourceName}' not found in cache. You must download it before using it.`
 
         const destinationImage = tint(sourceFrames.image, hue, saturation, white, black);
-        const destinationFrames = new Frames(destinationImage, sourceFrames);
+        const destinationFrames = new SpriteFrames(destinationImage, sourceFrames);
 
         urlCache.set(ImageLoader.cacheName, name, destinationFrames);
     }

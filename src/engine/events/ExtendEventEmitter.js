@@ -1,4 +1,4 @@
-import comparePaths from './tool.compare.path.mjs'
+import comparePaths from './ComparePathTool.js'
 
 /**
  * класс ExtendEventEmitter - упрощенный вариант EventEmitter-а из NodeJs но имеющий 

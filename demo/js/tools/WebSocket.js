@@ -1,4 +1,4 @@
-import ExtendEventEmitter from './class.extend.event.emitter.mjs'
+import ExtendEventEmitter from '../../../src/engine/events/ExtendEventEmitter.js'
 
 const protocol = {
     "http:": "ws:",

@@ -1,8 +1,8 @@
-import { Group, Sprite, Point } from '../src/engine/index.mjs'
-import { AudioLoader } from '../src/engine/index.mjs'
-import { urlCache } from '../src/engine/single.url.cache.mjs'
-import { Explode } from './class.explode.mjs'
-import bus from '../tools/tool.events.bus.mjs'
+import { Group, Sprite, Point } from '../src/engine/index.js'
+import { AudioLoader } from '../src/engine/index.js'
+import { urlCache } from '../src/engine/urlCache.js'
+import { Explode } from './Explode.js'
+import bus from '../tools/EventsBus.js'
 
 bus.once('engine.init', game => {
 });

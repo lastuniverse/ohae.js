@@ -1,4 +1,4 @@
-import { DisplayObject } from './class.display.object.mjs'
+import { DisplayObject } from './DisplayObject.js'
 
 export class Group extends DisplayObject {
     #childrens = [];

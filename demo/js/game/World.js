@@ -1,6 +1,6 @@
-import { Group, Sprite, Point } from '../src/engine/index.mjs'
-import { Rerandom } from '../tools/class.rerandom.mjs'
-import bus from '../tools/tool.events.bus.mjs'
+import { Group, Sprite, Point } from '../src/engine/index.js'
+import { Rerandom } from '../tools/ReRandom.js'
+import bus from '../tools/EventsBus.js'
 
 const prng = new Rerandom(4);
 

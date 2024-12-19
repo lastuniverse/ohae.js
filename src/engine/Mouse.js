@@ -1,4 +1,4 @@
-import ExtendEventEmitter from '../../tools/class.extend.event.emitter.mjs'
+import ExtendEventEmitter from './events/ExtendEventEmitter.js'
 
 export class Mouse extends ExtendEventEmitter {
     x = 0;

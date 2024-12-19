@@ -1,15 +1,15 @@
-import ExtendEventEmitter from '../../tools/class.extend.event.emitter.mjs'
-import bus from '../../tools/tool.events.bus.mjs'
-import { Loader } from './class.loader.mjs'
-import { Timer } from './class.timer.mjs'
-import { ImageLoader } from './class.loader.image.mjs'
-import { AudioLoader } from './class.loader.audio.mjs'
-import { Mouse } from './class.mouse.mjs'
-import { Point } from './class.point.mjs'
-import { Group } from './class.group.mjs'
+import ExtendEventEmitter from './events/ExtendEventEmitter.js'
+import bus from '../../tools/EventsBus.js'
+import { Loader } from './class.loader.js'
+import { Timer } from './Timer.js'
+import { ImageLoader } from './class.loader.image.js'
+import { AudioLoader } from './class.loader.audio.js'
+import { Mouse } from './Mouse.js'
+import { Point } from './Point.js'
+import { Group } from './Group.js'
 
 
-export class Game extends ExtendEventEmitter {
+export class GameCore extends ExtendEventEmitter {
     #scenes = {};
     #scenesList = [];
 

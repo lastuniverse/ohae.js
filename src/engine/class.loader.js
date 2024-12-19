@@ -1,5 +1,5 @@
-import ExtendEventEmitter from '../../tools/class.extend.event.emitter.mjs'
-import { urlCache } from './single.url.cache.mjs'
+import ExtendEventEmitter from './events/ExtendEventEmitter.js'
+import { urlCache } from './urlCache.js'
 
 export class Loader extends ExtendEventEmitter {
     static cacheName = "images";

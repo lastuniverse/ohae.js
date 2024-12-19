@@ -1,6 +1,6 @@
-import { Loader } from './class.loader.mjs'
-import { audioContext, Sound } from './class.sound.mjs'
-import { urlCache } from './single.url.cache.mjs'
+import { Loader } from './class.loader.js'
+import { audioContext, Sound } from './Sound.js'
+import { urlCache } from './urlCache.js'
 
 export class AudioLoader extends Loader {
     static cacheName = "sounds";

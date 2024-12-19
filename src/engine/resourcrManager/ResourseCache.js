@@ -1,4 +1,4 @@
-export class Cache {
+export class ResourseCache {
     #data = new Map();
 
     constructor() {

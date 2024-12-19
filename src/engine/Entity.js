@@ -1,4 +1,4 @@
-import { Collider } from './class.collider.mjs'
+import { Collider } from './Collider.js'
 
 // параметры объекта Entity по умолчанию
 const defaultEntityOptions = {
