@@ -3,20 +3,15 @@ import { Resource } from "./Resource.js";
 export class ResourceOfImage extends Resource {
 
 	async _load() {
-		return this._data = this._data ?? this._loadImage();
-	}
-
-	async _loadImage() {
-		const data = new Promise((resolve, reject) => {
-			console.log("start image load", this._url);
+		return await new Promise((resolve, reject) => {
+			console.log("start image load", this.url);
 
 			const img = new Image();
 			img.addEventListener('load', () => {
-				console.log("done image load", this._url);
+				console.log("done image load", this.url);
 				resolve(img);
 			}, false);
-			img.src = this._url;
+			img.src = this.url;
 		});
-		return data;
 	}
 }

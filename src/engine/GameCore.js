@@ -51,7 +51,7 @@ export class GameCore extends ExtendEventEmitter {
         // инициализация сцены
         this.addScene('main');
         
-        setTimeout(() => this.#onMustInit(), 0);
+        this.#onMustInit();
     }
 
     #onMustInit() {
