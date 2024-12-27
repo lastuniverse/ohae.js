@@ -1,14 +1,13 @@
 import { Group, Sprite } from '../src/engine/index.js'
-import { AudioLoader } from '../src/engine/index.js'
-import { urlCache } from '../src/engine/urlCache.js'
 import bus from '../tools/EventsBus.js'
 
 bus.once('engine.init', game => {
 });
 
 bus.once('engine.preload', game => {
-    game.loader.image.load('explode', '/images/assets.explode.png', '/images/assets.explode.json');
-    game.loader.audio.load('explode', '/sounds/explode.02.mp3');
+    game.resourceManager.addNamespace('explodes', false, false);
+    game.resourceManager.addResource('explodes', 'explode', '/sprites/game/assets.explode.json', 'spritesheet');
+    game.resourceManager.addResource('explodes', 'explode_sound', '/sounds/explode.02.mp3', 'sound');
 });
 
 bus.once('engine.create', game => {
@@ -23,11 +22,11 @@ export class Explode extends Group {
         super(game, position.x, position.y);
         this.#startTime = time / 2;
         this.visible = false;
-        this.explodeSound = urlCache.get(AudioLoader.cacheName, 'explode');
+        this.explodeSound = this.game.resourceManager.getResource('explodes', 'explode_sound');
 
         const sign = Math.round(Math.random()) * 2 - 1
-
-        this.explodeSprite = new Sprite(game, 'explode', 0, 0);
+        const explode = this.game.resourceManager.getResource('explodes', 'explode');
+        this.explodeSprite = new Sprite(game, explode, 0, 0);
         this.explodeSprite.scale = (0.5 + 0.5 * Math.random());
         this.explodeSprite.scale.x *= sign;
         this.add(this.explodeSprite);

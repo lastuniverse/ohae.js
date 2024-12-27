@@ -1,6 +1,4 @@
 import { Group, Sprite, Point } from '../src/engine/index.js'
-import { AudioLoader } from '../src/engine/index.js'
-import { urlCache } from '../src/engine/urlCache.js'
 import { Explode } from './Explode.js'
 import bus from '../tools/EventsBus.js'
 
@@ -8,9 +6,10 @@ bus.once('engine.init', game => {
 });
 
 bus.once('engine.preload', game => {
-    game.loader.image.load('tank', '/images/tanks/tank_01.png', '/images/tanks/tank_01.json');
-    game.loader.image.load('gunflash', '/images/assets.gunflash.png', '/images/assets.gunflash.json');
-    game.loader.audio.load('shoot', '/sounds/shoot.mp3');
+    game.resourceManager.addNamespace('tanks', false, false);
+    game.resourceManager.addResource('tanks','tank', '/sprites/game/tanks/tank_01.json', 'spritesheet');
+    game.resourceManager.addResource('tanks','gunflash', '/sprites/game/assets.gunflash.json', 'spritesheet');
+    game.resourceManager.addResource('tanks','shoot', '/sounds/shoot.mp3', 'sound');
 });
 
 bus.once('engine.create', game => {
@@ -44,13 +43,14 @@ export class Tank extends Group {
     #fire = false;
     #fireTime = 0;
     #speed = 0;
+    #isReady = false;
 
     constructor(game, group, x, y) {
         super(game, x, y);
+        this.shotSound = this.game.resourceManager.getResource('tanks','shoot');
 
-        this.shotSound = urlCache.get(AudioLoader.cacheName, 'shoot');
-        
-        this.bodySprite = new Sprite(game, 'tank', 0, 0);
+        const tank = this.game.resourceManager.getResource('tanks','tank');
+        this.bodySprite = new Sprite(game, tank, 0, 0);
         this.bodySprite.atlas.frameName = 'body';
         this.bodySprite.tintColor = { r: 50, g: 100, b: 32 };
         this.bodySprite.tintOpacity = 0.2;
@@ -60,19 +60,21 @@ export class Tank extends Group {
         this.tower = new Group(game, 0, 5);
         this.add(this.tower);
 
-        this.towerSprite = new Sprite(game, 'tank', 0, 5);
+        this.towerSprite = new Sprite(game, tank, 0, 5);
         this.towerSprite.atlas.frameName = 'tower';
         this.towerSprite.pivot.y = 0.78;
         this.towerSprite.tintColor = { r: 50, g: 100, b: 32 };
         this.towerSprite.tintOpacity = 0.2;
         this.tower.add(this.towerSprite);
 
-        this.fireSprite = new Sprite(game, 'gunflash', 0, -105);
+        const gunflash = this.game.resourceManager.getResource('tanks','gunflash');
+        this.fireSprite = new Sprite(game, gunflash, 0, -105);
         this.fireSprite.visible = false;
         this.fireSprite.angle = -90;
         this.tower.add(this.fireSprite);
 
         group.add(this);
+        this.#isReady = true;        
     }
 
     get moving() {
@@ -120,7 +122,7 @@ export class Tank extends Group {
         this.parent.add(explode);
     }
 
-    init(data) {
+    init(data){
         this.position.x = data.x ?? this.position.x;
         this.position.y = data.y ?? this.position.y;
         this.rotate = data.br ?? this.rotate;
@@ -129,6 +131,8 @@ export class Tank extends Group {
     }
 
     update(timer) {
+        if(!this.#isReady) return;
+
         if (this.#fire) {
             const q = this.#fireTime / this.#gun.shotAnimationDuration;
             this.fireSprite.visible = true;

@@ -1,4 +1,4 @@
-import { tint } from '../../tools/ImageTint.js'
+// import { tint } from '../../tools/ImageTint.js'
 import { Loader} from './class.loader.js'
 import { SpriteFrames } from './SpriteFrames.js'
 import { urlCache } from './urlCache.js'
@@ -51,22 +51,20 @@ export class ImageLoader extends Loader {
 
             img.src = this.baseURL + imageURL;
         }
-
-
     }
 
-    tint(name, sourceName, hue = 0.5, saturation = 1, white = 1, black = 0) {
-        if (!name || typeof name !== 'string') throw `Name must be a non-empty string`;
-        if (urlCache.has(ImageLoader.cacheName, name)) throw `Image with name '${name}' already exists. Change image name for use tint().`;
+    // tint(name, sourceName, hue = 0.5, saturation = 1, white = 1, black = 0) {
+    //     if (!name || typeof name !== 'string') throw `Name must be a non-empty string`;
+    //     if (urlCache.has(ImageLoader.cacheName, name)) throw `Image with name '${name}' already exists. Change image name for use tint().`;
 
-        if (!sourceName || typeof sourceName !== 'string') throw `SourceName must be a non-empty string`;
-        const sourceFrames = urlCache.get(ImageLoader.cacheName, sourceName);
+    //     if (!sourceName || typeof sourceName !== 'string') throw `SourceName must be a non-empty string`;
+    //     const sourceFrames = urlCache.get(ImageLoader.cacheName, sourceName);
 
-        if (!sourceFrames) throw `Image with sourceName '${sourceName}' not found in cache. You must download it before using it.`
+    //     if (!sourceFrames) throw `Image with sourceName '${sourceName}' not found in cache. You must download it before using it.`
 
-        const destinationImage = tint(sourceFrames.image, hue, saturation, white, black);
-        const destinationFrames = new SpriteFrames(destinationImage, sourceFrames);
+    //     const destinationImage = tint(sourceFrames.image, hue, saturation, white, black);
+    //     const destinationFrames = new SpriteFrames(destinationImage, sourceFrames);
 
-        urlCache.set(ImageLoader.cacheName, name, destinationFrames);
-    }
+    //     urlCache.set(ImageLoader.cacheName, name, destinationFrames);
+    // }
 }

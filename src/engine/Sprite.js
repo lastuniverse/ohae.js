@@ -9,7 +9,7 @@ export class Sprite extends DisplayObject {
 		super(game);
 		this.position = { x, y };
 
-		const atlas = urlCache.get(ImageLoader.cacheName, name);
+		const atlas = typeof name === 'string' ? urlCache.get(ImageLoader.cacheName, name) : name;
 		if (!atlas) throw `Image with name '${name}' not found in cache. You must download it before using it.`
 
 		this.atlas = new SpriteFrames(atlas.image, atlas);

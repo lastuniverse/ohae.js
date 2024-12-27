@@ -8,7 +8,8 @@ bus.once('engine.init', game => {
 });
 
 bus.once('engine.preload', game => {
-    game.loader.image.load('desert', './images/desert.real.png', './images/desert.json');
+    game.resourceManager.addNamespace('world', false, false);
+    game.resourceManager.addResource('world', 'desert', '/sprites/game/desert.json', 'spritesheet');
 });
 
 bus.once('engine.create', game => {
@@ -61,7 +62,8 @@ export class World extends Group {
     generateTile(worldX, worldY) {
         const x = Math.abs(this.spriteSize * (worldX % this.chankSize));
         const y = Math.abs(this.spriteSize * (worldY % this.chankSize));
-        const sprite = new Sprite(this.game, 'desert', x, y);
+        const desert = this.game.resourceManager.getResource('world', 'desert');
+        const sprite = new Sprite(this.game, desert, x, y);
 
         sprite.scale.x *= Math.round(prng.random(worldX, worldY, 1)) * 2 - 1;
         sprite.angle = Math.floor(prng.random(worldX, worldY, 3) * 360);

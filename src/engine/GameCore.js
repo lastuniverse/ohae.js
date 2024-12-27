@@ -1,3 +1,4 @@
+import { ResourceManager } from './resourceManager/ResourceManager.js'
 import ExtendEventEmitter from './events/ExtendEventEmitter.js'
 import bus from '../../tools/EventsBus.js'
 import { Loader } from './class.loader.js'
@@ -44,6 +45,9 @@ export class GameCore extends ExtendEventEmitter {
         new ImageLoader(this.loader);
         new AudioLoader(this.loader);
 
+        // инициализация менеджера ресурсов (потихоньку заменяем лоадеры])
+        this.resourceManager = new ResourceManager();
+        
         // инициализация сцены
         this.addScene('main');
         
@@ -51,13 +55,20 @@ export class GameCore extends ExtendEventEmitter {
     }
 
     #onMustInit() {
-        this.loader.once('load', progress => this.#onLoad());
+        // this.loader.once('load', async (progress) => {
+        //     await this.resourceManager.ready();
+        //     this.#onLoad(progress)
+        // });
 
         this.bus.emit('engine.init', this);
         this.emit('engine.init', this);
 
         this.bus.emit('engine.preload', this);
         this.emit('engine.preload', this);
+
+        this.resourceManager.ready().then(()=>{
+            this.#onLoad();
+        });
     }
 
     #onLoad() {

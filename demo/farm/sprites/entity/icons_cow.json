@@ -1,0 +1,111 @@
+{
+  "frames": {
+    "cow_up": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 441,
+        "h": 419
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 61,
+        "w": 441,
+        "h": 419
+      },
+      "sourceSize": {
+        "w": 480,
+        "h": 480
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cow_over": {
+      "frame": {
+        "x": 0,
+        "y": 419,
+        "w": 431,
+        "h": 413
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 67,
+        "w": 431,
+        "h": 413
+      },
+      "sourceSize": {
+        "w": 480,
+        "h": 480
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cow_down": {
+      "frame": {
+        "x": 0,
+        "y": 832,
+        "w": 424,
+        "h": 402
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 38,
+        "y": 78,
+        "w": 424,
+        "h": 402
+      },
+      "sourceSize": {
+        "w": 480,
+        "h": 480
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cow_default": {
+      "frame": {
+        "x": 0,
+        "y": 1234,
+        "w": 382,
+        "h": 364
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 67,
+        "w": 382,
+        "h": 364
+      },
+      "sourceSize": {
+        "w": 480,
+        "h": 480
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "icons_cow.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 441,
+      "h": 1598
+    },
+    "scale": 1
+  }
+}

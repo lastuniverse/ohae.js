@@ -1,3 +1,8 @@
+import { ResourceManager } from './src/engine/resourceManager/ResourceManager.js'
+import { Resource } from './src/engine/resourceManager/Resource.js'
+import { ResourceOfImage } from './src/engine/resourceManager/ResourceOfImage.js'
+import { ResourceOfSpriteSheet } from './src/engine/resourceManager/ResourceOfSpriteSheet.js'
+import { ResourceOfSound } from './src/engine/resourceManager/ResourceOfSound.js'
 import { GameCore, Keyboard } from './src/engine/index.js'
 import { World } from './game/World.js'
 import { Tank } from './game/Tank.js'

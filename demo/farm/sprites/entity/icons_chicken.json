@@ -1,0 +1,111 @@
+{
+  "frames": {
+    "chicken_up": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 398,
+        "h": 437
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 71,
+        "y": 43,
+        "w": 398,
+        "h": 437
+      },
+      "sourceSize": {
+        "w": 480,
+        "h": 480
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "chicken_over": {
+      "frame": {
+        "x": 398,
+        "y": 0,
+        "w": 369,
+        "h": 431
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 81,
+        "y": 49,
+        "w": 369,
+        "h": 431
+      },
+      "sourceSize": {
+        "w": 480,
+        "h": 480
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "chicken_down": {
+      "frame": {
+        "x": 398,
+        "y": 431,
+        "w": 360,
+        "h": 420
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 70,
+        "y": 60,
+        "w": 360,
+        "h": 420
+      },
+      "sourceSize": {
+        "w": 480,
+        "h": 480
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "chicken_default": {
+      "frame": {
+        "x": 0,
+        "y": 437,
+        "w": 318,
+        "h": 382
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 81,
+        "y": 49,
+        "w": 318,
+        "h": 382
+      },
+      "sourceSize": {
+        "w": 480,
+        "h": 480
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "icons_chicken.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 767,
+      "h": 851
+    },
+    "scale": 1
+  }
+}
